@@ -1,0 +1,4 @@
+// el asterisco me permite no poner nombre.$variable ejemplo, si coloco un nombre o letra en lugar de asterisco tendre que poner v.$variable etc
+@forward 'normalize';
+@forward 'variables'; // "use" se usa para importar el sass desde otro archivo
+@forward 'globales' ;
