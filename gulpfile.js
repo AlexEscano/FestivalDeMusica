@@ -8,7 +8,7 @@ export function Sass(done){
     src('src/scss/app.scss')
         .pipe(sass().on('error', sass.logError)) //Para los errores .pipe(sass().on('error', sass.logError))
         .pipe(dest('build/css'))
-    done()
+    done();
 }
 
 // para crear el watch

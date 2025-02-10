@@ -1,0 +1,14 @@
+@use 'variables' as v;
+
+@mixin telefono{
+    @media (min-width: v.$telefono){
+       @content;
+    }
+}
+
+@mixin tablet{
+    @media (min-width: v.$tablet){
+        @content; //Permite que el añadir codigo sea dinamico.
+
+    }
+}

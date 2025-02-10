@@ -378,30 +378,53 @@ body > section {
 .header {
   background-color: #4CB8B3;
 }
-.header .contenido-header {
-  display: flex;
+
+.contenido-header {
   padding: 2rem;
-  justify-content: space-between;
-  align-items: center;
+  text-align: center;
 }
-.header .contenido-header h1 {
-  margin: 0;
+@media (min-width: 768px) {
+  .contenido-header {
+    display: flex;
+    gap: 2rem;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+@media (min-width: 768px) {
+  h1 {
+    margin: 0;
+  }
+}
+
+.nav-principal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+@media (min-width: 768px) {
+  .nav-principal {
+    flex-direction: row;
+  }
 }
 
 .nav__titulo {
   color: #FFFFFF;
 }
 
-.nav-principal {
-  display: flex;
-  gap: 2rem;
-}
-
 .nav-principal__enlaces {
   color: #FFFFFF;
-  font-weight: 200;
+  font-weight: 300;
   transition: color ease 0.2s;
   font-size: 2.2rem;
+  margin: 1rem 0;
+}
+@media (min-width: 768px) {
+  .nav-principal__enlaces {
+    margin: 0;
+  }
 }
 .nav-principal__enlaces:hover {
   color: #fdda00;
