@@ -12,3 +12,23 @@
 
     }
 }
+
+@mixin desktop{
+    @media (min-width: v.$desktop){
+        @content; //Permite que el añadir codigo sea dinamico.
+
+    }
+}
+
+@mixin contenedor {
+    width: 95%;
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+@mixin grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+    align-items: center;
+}

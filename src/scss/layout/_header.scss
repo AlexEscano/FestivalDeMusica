@@ -1,53 +1,35 @@
 @use 'base/variables' as v;
 @use 'base/mixins' as m;
 
-.header {
-    background-color: v.$verde;
 
+.header{
+    background-color: v.$verde;
 }
 .contenido-header{
-    padding: 2rem;
     text-align: center;
-    @include m.tablet {
+    h1{color: v.$blanco;}
+    padding: 2rem;
+    @include m.tablet{
         display: flex;
-        gap: 2rem;
         justify-content: space-between;
+        h1{
+            margin: 0;
+            
+        }
+    }
+
+}
+.nav-principal{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    a{color: v.$blanco;
+        &:hover{//Hover de los enlaces
+            color: v.$amarillo;
+        }
+    }
+    @include m.tablet{
+        flex-direction: row;
         align-items: center;
     }
 }
-
-h1{
-
-    @include m.tablet{
-        margin:0;
-    }
-}
-
-.nav-principal {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 2rem;
-
-    @include m.tablet{
-       flex-direction: row; 
-    }
-} 
-.nav__titulo {
-    color: v.$blanco; 
-}
-
-.nav-principal__enlaces{
-    color: v.$blanco; 
-    font-weight: 300;
-    transition: color ease .2s;
-    font-size: 2.2rem;
-    margin: 1rem 0;
-    @include m.tablet{
-        margin: 0;
-    }
-    &:hover{ //& sirve para quitar los espacios
-        color: v.$amarillo;    
-    }
-}
-

@@ -1,0 +1,53 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+@use 'sass:color';
+
+.video{ //Este es el padre
+
+    position: relative;//Para el padre
+    min-height: 30rem;
+    max-height: 60rem;
+    overflow: hidden;
+  
+    .overlay{
+        position: absolute;//Para los hijos
+        background: linear-gradient(
+            270deg,
+            rgba(v.$morado, 60%),
+            rgba( color.adjust( v.$morado, $lightness: -20%), 90%),
+        );
+        inset: 0;
+        display: flex;
+        align-items: center;
+        z-index: 10;
+        
+
+    }
+
+    video{
+       
+        display: block;
+        width: auto; //Para telefonos
+        @include m.desktop{
+            width: 100%;
+        }
+
+    }
+}
+
+.contenido-video {
+    h2{
+        color: v.$blanco;
+        margin: 0;
+    }
+    p{
+        display: inline-block;
+        padding: 1rem 2rem;
+        margin: 0;
+        background-color: v.$rosa;
+        color: v.$blanco ;
+        font-weight: 700;
+        
+    }
+}
+

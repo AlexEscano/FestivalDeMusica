@@ -380,20 +380,18 @@ body > section {
 }
 
 .contenido-header {
-  padding: 2rem;
   text-align: center;
+  padding: 2rem;
+}
+.contenido-header h1 {
+  color: #FFFFFF;
 }
 @media (min-width: 768px) {
   .contenido-header {
     display: flex;
-    gap: 2rem;
     justify-content: space-between;
-    align-items: center;
   }
-}
-
-@media (min-width: 768px) {
-  h1 {
+  .contenido-header h1 {
     margin: 0;
   }
 }
@@ -401,31 +399,68 @@ body > section {
 .nav-principal {
   display: flex;
   flex-direction: column;
-  align-items: center;
   gap: 2rem;
+}
+.nav-principal a {
+  color: #FFFFFF;
+}
+.nav-principal a:hover {
+  color: #fdda00;
 }
 @media (min-width: 768px) {
   .nav-principal {
     flex-direction: row;
+    align-items: center;
   }
 }
 
-.nav__titulo {
-  color: #FFFFFF;
+.video {
+  position: relative;
+  min-height: 30rem;
+  max-height: 60rem;
+  overflow: hidden;
 }
-
-.nav-principal__enlaces {
-  color: #FFFFFF;
-  font-weight: 300;
-  transition: color ease 0.2s;
-  font-size: 2.2rem;
-  margin: 1rem 0;
+.video .overlay {
+  position: absolute;
+  background: linear-gradient(270deg, rgba(117, 47, 151, 0.6), rgba(56.7272727273, 22.7878787879, 73.2121212121, 0.9));
+  inset: 0;
+  display: flex;
+  align-items: center;
+  z-index: 10;
 }
-@media (min-width: 768px) {
-  .nav-principal__enlaces {
-    margin: 0;
+.video video {
+  display: block;
+  width: auto;
+}
+@media (min-width: 1200px) {
+  .video video {
+    width: 100%;
   }
 }
-.nav-principal__enlaces:hover {
-  color: #fdda00;
+
+.contenido-video h2 {
+  color: #FFFFFF;
+  margin: 0;
+}
+.contenido-video p {
+  display: inline-block;
+  padding: 1rem 2rem;
+  margin: 0;
+  background-color: #F53756;
+  color: #FFFFFF;
+  font-weight: 700;
+}
+
+.sobre-festival {
+  width: 95%;
+  max-width: 120rem;
+  margin: 0 auto;
+}
+.contenido-festival h2 {
+  margin: 4rem 0;
+}
+.contenido-festival .fecha {
+  color: #4CB8B3;
+  font-weight: 500;
+  font-size: 1.8rem;
 }
