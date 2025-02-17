@@ -456,6 +456,15 @@ body > section {
   max-width: 120rem;
   margin: 0 auto;
 }
+@media (min-width: 768px) {
+  .sobre-festival {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 6rem;
+    align-items: center;
+  }
+}
+
 .contenido-festival h2 {
   margin: 4rem 0;
 }
