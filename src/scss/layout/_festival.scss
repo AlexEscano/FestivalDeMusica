@@ -4,7 +4,7 @@
 .sobre-festival {
     @include m.contenedor;
     @include m.tablet{
-        @include m.grid(2, 6rem);
+        @include m.grid(2); //numeri de grids
     }
 }
 .contenido-festival {

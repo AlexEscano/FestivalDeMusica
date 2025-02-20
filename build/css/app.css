@@ -460,7 +460,7 @@ body > section {
   .sobre-festival {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 6rem;
+    gap: 5rem;
     align-items: center;
   }
 }
@@ -472,4 +472,36 @@ body > section {
   color: #4CB8B3;
   font-weight: 500;
   font-size: 1.8rem;
+}
+
+.lineup {
+  background-color: #F53756;
+}
+.lineup h3 {
+  color: #FFFFFF;
+}
+.lineup .dia {
+  color: #FFFFFF;
+  font-size: 3rem;
+  text-align: center;
+}
+
+.escenarios-contenedor {
+  width: 95%;
+  max-width: 120rem;
+  margin: 0 auto;
+}
+@media (min-width: 768px) {
+  .escenarios-contenedor {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5rem;
+    align-items: center;
+  }
+}
+.escenarios-contenedor .bg-amarillo {
+  background-color: #fdda00;
+}
+.escenarios-contenedor .bg-verde {
+  background-color: #4CB8B3;
 }

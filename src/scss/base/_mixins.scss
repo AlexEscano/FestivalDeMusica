@@ -26,7 +26,7 @@
     margin: 0 auto;
 }
 
-@mixin grid($colunms,$gap) {
+@mixin grid($colunms,$gap : 5rem) { //En caso de que no se pase un valor al parametro de gap se le coloca 5rem por Default
     display: grid;
     grid-template-columns: repeat($colunms, 1fr);
     gap: $gap;
