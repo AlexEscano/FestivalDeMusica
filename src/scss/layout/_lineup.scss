@@ -1,6 +1,6 @@
 @use 'base/variables' as v;
 @use 'base/mixins' as m;
-
+@use 'sass:color';
 .lineup {
     background-color: v.$rosa;
 
@@ -22,15 +22,31 @@
     }
     .bg-amarillo {
         background-color: v.$amarillo;
+        li:nth-child(odd) {
+            background-color: adjust-color(v.$amarillo, $lightness:10%);
+        }
     }
 
     .bg-verde {
         background-color: v.$verde;
+        li:nth-child(odd) {
+            background-color: adjust-color(v.$verde, $lightness:10%);
+        }
     }
 }
 
 .escenario {
     .nombre-escenario {
+        font-size: 2.5rem;
+        text-align: center;
+    }
+}
 
+.calendario {
+    padding: 0;
+    li {
+        list-style: none;
+        text-align: center;
+        padding: 2rem 0;
     }
 }

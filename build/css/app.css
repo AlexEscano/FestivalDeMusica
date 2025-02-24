@@ -502,6 +502,26 @@ body > section {
 .escenarios-contenedor .bg-amarillo {
   background-color: #fdda00;
 }
+.escenarios-contenedor .bg-amarillo li:nth-child(odd) {
+  background-color: rgb(255, 226.5019762846, 49);
+}
 .escenarios-contenedor .bg-verde {
   background-color: #4CB8B3;
+}
+.escenarios-contenedor .bg-verde li:nth-child(odd) {
+  background-color: rgb(112.516, 198.484, 194.504);
+}
+
+.escenario .nombre-escenario {
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+.calendario {
+  padding: 0;
+}
+.calendario li {
+  list-style: none;
+  text-align: center;
+  padding: 2rem 0;
 }
