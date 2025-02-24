@@ -533,7 +533,6 @@ body > section {
   color: #FFFFFF;
 }
 .contenedor-boletos .boletos {
-  transition: transform ease 0.2s;
   width: 95%;
   max-width: 120rem;
   margin: 0 auto;
@@ -546,47 +545,51 @@ body > section {
     align-items: center;
   }
 }
-.contenedor-boletos .boletos:hover {
-  transform: scale(1.1);
-}
 
 .pase {
-  background-color: #FFFFFF;
+  transition: transform ease-in-out 0.3s;
 }
-.pase .pase-nombre {
+.pase:hover {
+  transform: scale(1.1);
+}
+.pase-nombre {
   text-align: center;
   font-size: 3rem;
   font-weight: bold;
   color: #FFFFFF;
-  background-color: #4CB8B3;
   margin: 0;
 }
-.pase .pase-header {
+.pase-header {
   background-color: #F53756;
   padding: 1rem;
 }
-.pase .pase-header p {
+.pase-header p {
+  text-transform: uppercase;
   margin: 0;
   text-align: center;
   font-weight: 200;
   color: #FFFFFF;
 }
-
+.pase-body {
+  background-color: #FFFFFF;
+}
 .pase-body ul {
   padding: 0;
+  margin: 0;
+  list-style: none;
 }
 .pase-body li {
   list-style: none;
   text-align: center;
   padding: 2rem 0;
-  border-bottom: solid 1px rgb(127.5, 127.5, 127.5);
+  border-bottom: solid 1px #e1e1e1;
 }
 .pase-body li:first-of-type {
   padding: 1rem 0 2rem 0;
 }
-
 .pase-footer {
-  padding: 1rem;
+  background-color: #FFFFFF;
+  padding: 3rem;
 }
 .pase-footer p {
   background-color: #752F97;
@@ -597,4 +600,9 @@ body > section {
   font-weight: 1000;
   font-size: 2.5rem;
   border-radius: 1rem;
+  cursor: pointer;
+  transition: background-color ease-in-out 0.2s;
+}
+.pase-footer p:hover {
+  background-color: rgb(86.8636363636, 34.8939393939, 112.1060606061);
 }

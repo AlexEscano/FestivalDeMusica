@@ -26,6 +26,12 @@
     margin: 0 auto;
 }
 
+@mixin list-reset{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
 @mixin grid($colunms,$gap : 5rem) { //En caso de que no se pase un valor al parametro de gap se le coloca 5rem por Default
     display: grid;
     grid-template-columns: repeat($colunms, 1fr);
