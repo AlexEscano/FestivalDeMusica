@@ -15,7 +15,7 @@ function crearImagenes() {
         imagenes.src = `src/img/gallery/full/${i}.jpg`;
         galeria.appendChild(imagenes);
 
-        imagenes.onclick = function (i){
+        imagenes.onclick = function (){
             crearModal(i)
         }
         
@@ -24,8 +24,29 @@ function crearImagenes() {
    
 };
 
-function crearModal(){
+function crearModal(i) {
+    const body = document.querySelector('body');
     const modal = document.createElement('DIV');
-    modal.classList.add('modal')
-    console.log('hola desde el modal', i )
+    const imagenes = document.createElement('IMG');
+    imagenes.src = `src/img/gallery/full/${i}.jpg`;
+    modal.classList.add('modal');
+    body.classList.add('overflow-hidden');
+    
+    body.appendChild(modal)
+    modal.appendChild(imagenes)
+    // console.log('hola desde el modal', i );
+
+    // para quitar el modal
+    modal.onclick = quitarModal;
+}
+
+function quitarModal() {
+    const body = document.querySelector('body');
+    const modal = document.querySelector('.modal');
+    modal.classList.add('out');
+    body.classList.remove('overflow-hidden');
+    setTimeout(()=>{
+        
+        modal?.remove();
+    },500)
 }
