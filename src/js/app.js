@@ -34,7 +34,7 @@ function crearImagenes() {
         imagenes.loading = 'lazy';
         imagenes.width = 200
         imagenes.height = 200
-        imagenes.src = `src/img/gallery/full/${i}.jpg`;
+        imagenes.src = `src/img/gallery/thumb/${i}.jpg`;
         galeria.appendChild(imagenes);
 
         imagenes.onclick = function (){
