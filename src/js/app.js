@@ -1,8 +1,28 @@
 // Cuando el documento este listo
 document.addEventListener('DOMContentLoaded', function(){
-    crearImagenes()
+    crearImagenes();
+    fijarHeader();
+    resaltar();
 });
 
+function resaltar(){
+    const sections = document.querySelectorAll('section');
+    console.log(sections)
+}
+
+function fijarHeader() {
+    const header = document.querySelector('.header');
+    const section = document.querySelector('.sobre-festival');
+    document.addEventListener('scroll', ()=>{
+        if(section.getBoundingClientRect().bottom < 1){
+            header.classList.add('fixed');
+            
+        }else {
+            header.classList.remove('fixed');
+        }
+    })
+
+}
 function crearImagenes() {
     const galeria = document.querySelector('.galeria-imagenes');
     
@@ -28,13 +48,20 @@ function crearModal(i) {
     const body = document.querySelector('body');
     const modal = document.createElement('DIV');
     const imagenes = document.createElement('IMG');
+
     imagenes.src = `src/img/gallery/full/${i}.jpg`;
     modal.classList.add('modal');
     body.classList.add('overflow-hidden');
-    
+    //Agregando al html
     body.appendChild(modal)
     modal.appendChild(imagenes)
-    // console.log('hola desde el modal', i );
+
+    //boton
+    const cerrarModalBTN = document.createElement('BUTTON')
+    cerrarModalBTN.textContent = 'X';
+    cerrarModalBTN.classList.add('modal-btn')
+    modal.appendChild(cerrarModalBTN)
+    cerrarModalBTN.onclick = quitarModal
 
     // para quitar el modal
     modal.onclick = quitarModal;

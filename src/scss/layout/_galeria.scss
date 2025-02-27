@@ -38,6 +38,13 @@
     &.out {
         animation: fadeout ease-out 0.6s;
     }
+    &-btn {
+        border-radius: 40%;
+        font-weight: 500;
+        box-shadow: none;
+        border: none;
+        cursor: pointer;
+    }
 }
 
 @keyframes fadein {
