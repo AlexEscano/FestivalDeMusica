@@ -25,13 +25,15 @@ function fijarHeader() {
 }
 function crearImagenes() {
     const galeria = document.querySelector('.galeria-imagenes');
-    
 
     // recorrer imagenes
     const cantidadImagenes = 16;
     for(let i = 1; i <= cantidadImagenes; i++){
         // Generando las imagenes
         const imagenes = document.createElement('IMG');
+        imagenes.loading = 'lazy';
+        imagenes.width = 200
+        imagenes.height = 200
         imagenes.src = `src/img/gallery/full/${i}.jpg`;
         galeria.appendChild(imagenes);
 
